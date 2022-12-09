@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediaMingle - Welcome!</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://web01.scwebsrv.com/WEB%20104/FP-Files/CSS/welcome.css">
+</head>
+
+
+<body>
+    <header>
+        <h1><span id="slogan">Come share with</span><br>&nbsp;<br><span id="title">Media</span><span id="title-br">Mingle</span>
+        </h1>
+        <h3 id="desc">Post reviews about any form of media you'd like!</h3>
+        
+    </header>
+
+
+    <div class="fixed-marker">
+        <h2><span id="title2">Media</span><span id="title2-br">Mingle</span></h2>
+        <h2 id="owner-mark">by Vanessa Allen</h2>
+    </div>
+
+    <nav class="wrapper">
+        <div class="input-container">
+            <h3 id="login-title">Login or Create Account</h3>
+            <label for="fullName">Name</label>
+            <input name="fullName" type="text" id="fullName" placeholder="Full name">
+
+            <label for="email">Email</label>
+            <input name="email" type="email" id="email" placeholder="Email">
+
+            <label for="password">Password</label>
+            <input name="password" type="password" id="password" placeholder="Password">
+        </div>
+
+        <div class="button-container">
+            <button onclick="loginUser()">Login</button>
+            <button onclick="createAccount()">Create Account</button>
+            <button id="continue" onclick="continueToIndex()">Continue</button>
+            <button onclick="signOut()">Sign out</button>
+            <button><a href="https://web01.scwebsrv.com/WEB%20104/FP-Files/contact.html">Contact Us</a></button>
+        </div>
+    </nav>
+
+    <!-- Footer -->
+    <footer>
+        <ul>
+            <li>&copy; MediaMingle.com 2022</li>
+            <li>Home</li>
+            <li><a href="https://web01.scwebsrv.com/WEB%20104/FP-Files/contact.html">Contact Us</a></li>
+        </ul>
+    </footer>
+</body>
+
+<!-- FIREBASE stuff -->
+
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+<!-- JS (loaded after Firebase reference) -->
+<script src="https://web01.scwebsrv.com/WEB%20104/FP-Files/JS/welcome.js"></script>
+
+</html>

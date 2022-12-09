@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+/* // MOBILE VIEW // */
+html {
+    font-family: "Montserrat", serif;
+}
+
+body {
+    line-height: 1.5rem;
+    background-color: rgba(89, 134, 78, 0.616);
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+h1 {
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    line-height: 2rem;
+    margin: 0;
+}
+
+#slogan {
+    font-size: 2rem;
+}
+
+#title {
+    font-size: 3rem;
+    color: lightyellow;
+}
+
+#title-br {
+    font-size: 3rem;
+    color: rgb(18, 61, 18);
+}
+
+#desc {
+    margin: 0;
+    margin-bottom: 3rem;
+}
+
+/* FIXED MARKER */
+.fixed-marker {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.fixed-marker h2 {
+    margin-bottom: 0;
+}
+
+#title2 {
+    color: lightyellow;
+}
+
+#title2-br {
+    color: rgb(18, 61, 18);
+}
+
+#owner-mark {
+    text-align: right;
+    padding-top: 0;
+    margin: 0;
+    font-size: .5rem;
+}
+
+/* LOGIN */
+.wrapper {
+    text-align: center;
+}
+
+#login-title {
+    margin-bottom: .5rem;
+}
+
+input {
+    display: block;
+    margin: auto;
+    font-size: 1.2rem;
+    min-width: 25%;
+    border-radius: 10px;
+}
+
+
+/* BUTTONS */
+button {
+    font-size: 1.2rem;
+    display: block;
+    margin: auto;
+    min-width: 25%;
+    background-color: lightyellow;
+    border-radius: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+button:hover {
+    background-color: rgb(199, 199, 174);
+}
+
+button:active {
+    background-color: rgba(89, 134, 78, 0.616);
+    color: white;
+    border: 2px solid lightyellow;
+}
+
+a:active {
+    color: white;
+}
+
+/* FOOTER */
+footer {
+    text-align: left;
+    margin-top: 20rem;
+}
+
+footer ul {
+    padding-left: 0;
+}
+
+footer li {
+    list-style-type: none;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+
+/* // DESKTOP/TABLET VIEW // */
+@media screen and (min-width: 700px) {
+    body {
+        line-height: 1.5rem;
+        background-color: rgba(89, 134, 78, 0.616);
+        position: relative;
+    }
+
+    /* NAV */
+
+    .wrapper {
+        margin-top: 5rem;
+        position: absolute;
+        top: -4rem;
+        right: 0;
+        position: fixed;
+    }
+
+    #login-title {
+        margin-top: 0;
+    }
+
+    nav input,
+    button {
+        display: inline-block;
+        max-width: 10rem;
+        min-width: 1rem;
+    }
+
+    /* HEADER */
+    header {
+        display: block;
+        margin: auto;
+        margin-top: 20rem;
+        max-width: 100%;
+        
+    }
+
+    h1 {
+        font-size: 4rem;
+        margin: 2rem;
+    }
+
+    #slogan {
+        font-size: 2.5rem;
+    }
+
+    #title {
+        font-size: 5rem;
+        color: lightyellow;
+    }
+
+    #title-br {
+        font-size: 5rem;
+        color: rgb(18, 61, 18);
+    }
+
+    /* FIXED MARKER */
+    .fixed-marker {
+        position: fixed;
+        top: 0;
+        left: 1rem;
+        max-height: 3.5rem;
+        max-width: 16rem;
+    }
+
+    .fixed-marker h2 {
+        margin-bottom: 0;
+    }
+
+    #title2 {
+        font-size: 2.5rem;
+        color: lightyellow;
+    }
+
+    #title2-br {
+        font-size: 2.5rem;
+        color: rgb(18, 61, 18);
+    }
+
+    #owner-mark {
+        text-align: right;
+        padding-top: 0;
+        margin: 0;
+        font-size: 1.25rem;
+        margin-top: .5rem;
+    }
+
+    /* BUTTONS */
+    #continue {
+        position: absolute;
+        top: 35rem;
+        display: block;
+        margin: auto;
+    }
+
+    #contact {
+        background-color: red;
+    }
+
+    /* FOOTER */
+    footer {
+        text-align: center;
+        margin-top: 20rem;
+    }
+
+    footer li {
+        list-style-type: none;
+        display: inline-block;
+        padding: 6rem;
+    }
+
+    footer a {
+        text-decoration: none;
+    }
+}

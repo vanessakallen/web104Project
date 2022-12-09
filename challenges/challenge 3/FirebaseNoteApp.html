@@ -1,0 +1,83 @@
+<!-- <input id="test" placeholder="document">
+<button onclick="storeNote()">store data</button> -->
+
+<input id="document" placeholder="document"> <br>
+
+<input id="noteID" placeholder="note title"> <br>
+<input id="noteContent" placeholder="note content"> <br>
+
+<button onclick="storeNote(), writeNote()">Add note</button>
+
+<body></body>
+<div id="list"></div>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+
+<script>
+
+
+    // I tried my best on this, but it did not go very well
+
+
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+        apiKey: "AIzaSyCZE8vI9UKFaNFfqIBEbODZqitTmuKwfCs",
+        authDomain: "web104-e1aec.firebaseapp.com",
+        projectId: "web104-e1aec",
+        storageBucket: "web104-e1aec.appspot.com",
+        messagingSenderId: "684617826216",
+        appId: "1:684617826216:web:9955a8d8ea93828ca6e79d",
+        measurementId: "G-4W7VC3NYR1"
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+
+
+    function storeNote() {
+
+        //write to the database
+        let doc = document.getElementById("document").value;
+        let noteID = document.getElementById("noteID").value;
+        let noteContent = document.getElementById("noteContent").value;
+
+        db.collection("notes").doc(doc).set({
+            document: doc,
+            noteID: noteID,
+            noteContent: noteContent,
+        })
+
+            .then(function () {
+                console.log("Document successfully written!");
+
+
+                let notes = db.collection('notes');
+                let docDisplay = notes.get()
+                    .then(snapshot => {
+                        snapshot.forEach(doc => {
+                            //creating element for DOC content to be displayed to
+                            let content = document.createElement("p");
+                            //assigning value to innerText
+                            content.innerText += doc.id + " " + doc.data().document;
+
+                            document.body.appendChild(content);
+                            // console.log(doc.id, '=>', doc.data());
+                        });
+                    })
+
+                    .catch(err => {
+                        console.log('Error getting documents', err);
+                    });
+            })
+
+            .catch(function (error) {
+                console.error("Error writing document: ", error);
+            });
+    }
+
+</script>
+
+<body></body>

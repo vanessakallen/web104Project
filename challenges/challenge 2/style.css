@@ -1,0 +1,62 @@
+body {
+    line-height: 1.5rem;
+    margin: 0;
+    background-color: rgb(217, 246, 255);
+}
+
+header {
+    text-align: center;
+    font-size: 2rem;
+}
+
+input {
+    font-size: 1.5rem;
+    background-color: lightblue;
+    color: rgb(36, 83, 104);
+    border-radius: 10px;
+}
+
+.submit {
+    background-color: lightblue;
+    color: rgb(36, 83, 104);
+    border-radius: 10px;
+}
+
+.submit:active {
+    background-color: rgba(24, 89, 119, 0.486);
+}
+
+#title {
+    background-color: white;
+    padding: 4rem;
+    margin: 0;
+}
+
+main {
+    text-align: center;
+}
+
+.wrapper h2 {
+    padding-top: 1rem;
+    font-size: 2rem;
+}
+
+.wrapper {
+    margin: 4rem;
+    background-color: white;
+}
+
+.name {
+    font-size: 3.5rem;
+    color: rgb(36, 83, 104);
+    margin-top: 4rem;
+    margin-bottom: 0;
+}
+
+.list {
+    padding: .5rem;
+}
+
+.temp, .clouds, .report {
+    font-size: 1.5rem;
+}

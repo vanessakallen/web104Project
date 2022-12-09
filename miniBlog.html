@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Blog App</title>
+</head>
+
+<body>
+    <h1>Enter Blog Below</h1>
+    <div class="container">
+        <input type="text" id="subject" placeholder="Subject">
+        <input type="text" id="content" placeholder="Content">
+        <button onclick="blogObject.newItem()" class="submitButton">Add post</button>
+    </div>
+
+    <script>
+        let blogObject = {
+            author: "",
+            subject: "",
+            content: "",
+
+            // printing to the page
+            newItem() {
+                this.author = prompt("Enter author's name") // setting author name
+
+                this.subject = document.getElementById("subject").value; // setting the content of the subject
+
+                this.content = document.getElementById("content").value; // setting the content for the content
+
+                let subjectHead = document.createElement("h1") // creating h1 tag, assigning to subjectHead variable
+
+                subjectHead.innerText = this.subject; // setting innertext to the value grabbed from input field
+
+                let content = document.createElement("p")
+
+                content.innerText = this.content;
+
+                let author = document.createElement("p")
+
+                author.innerText = this.author;
+
+                document.body.appendChild(subjectHead); // print the subjectHead to the page
+                document.body.appendChild(content);
+                document.body.appendChild(author);
+                this.storeBlog(this.content, this.subject);
+            },
+
+            // storing the content
+            storeBlog(content, subject) {
+                localStorage.setItem(subject, content)
+
+            }
+
+        }
+
+    </script>
+
+    <style>
+        body {
+            background-color: antiquewhite;
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-align: center;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        #subject,
+        #content,
+        .submitButton {
+            font-size: 1.5rem;
+        }
+
+        #text {
+            margin: 1rem;
+        }
+    </style>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!-- We interac with API by making requests to endpoints 
+http://mywebsite.com/create
+
+http://mywebsite.com/read 
+http://mywebsite.com/update
+http://mywebsite.com/delete
+
+
+http://api.marketstack.com/v1/eod
+? access_key = YOUR_ACCESS_KEY 
+& symbols = AAPL
+
+
+http://api.marketstack.com/v1/eod?access_key=7f57b03e875033aa5009c4d7463c73bc&symbols=AAPL -->
+
+<input id="stock" type="text" placeholder="enter stock symbol to search">
+<button onclick="searchStock()">get stock info</button>
+<div id="display"></div>
+
+<script>
+
+    //might have to change http to https
+
+    function searchStock() {
+        let key = "?access_key=7f57b03e875033aa5009c4d7463c73bc&symbols=";
+        let symbol = "AAPL";
+        let url = "https://api.marketstack.com/v1/eod" + key + symbol;
+
+        let response = fetch(url);
+
+        fetch(url)
+            .then(response => response.json() // fetch must be designed as a javascript promise
+
+                //   response.text() // reads response returns text
+                //   response.json() // parse the json for you automatically
+                //   response.formData() // revisted 
+                //   response.blob()
+                //   response.arrayBuffer()
+
+            ).then((data) => {
+                // console.log(data.data[0].symbol)
+                // document.write(data.data[0].symbol + " " + data.data[0].open)
+                document.getElementById("display").innerText = data.data[0].symbol + " " + data.data[0].open
+
+            })
+
+
+            .catch(
+                function () {
+                    console.log("not found")
+                }
+            )
+
+    }
+
+
+</script>

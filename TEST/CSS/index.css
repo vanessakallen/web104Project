@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html {
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    line-height: 1.5rem;
+    background-color: rgba(89, 134, 78, 0.616);
+    margin: 1rem;
+}
+
+
+/* H1 */
+h1 {
+    text-align: center;
+    margin: 2rem;
+    padding: 0;
+    font-size: 3rem;
+}
+
+/* FIXED MARKER */
+.fixed-marker {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 3;
+}
+
+.fixed-marker h2 {
+    margin-bottom: 0;
+}
+
+#title2 {
+    color: rgb(255, 242, 198);
+    background-color: rgba(18, 61, 18, 0.733);
+    font-size: 2rem;
+}
+
+#title2-br {
+    color: rgb(18, 61, 18);
+    font-size: 2rem;
+}
+
+#owner-mark {
+    text-align: right;
+    padding-top: 0;
+    margin: 0;
+    font-size: .5rem;
+}
+
+/* MAIN CONTENT */
+form {
+    display: block;
+    margin: auto;
+    background-color: lightyellow;
+    max-width: 100%;
+    border-radius: 10px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border: 2px solid black;
+}
+
+.form-group {
+    text-align: center;
+    max-width: 100%;
+}
+
+.card-body {
+    background-color: lightyellow;
+    padding: .5rem;
+    max-width: 100%;
+    margin: auto;
+    border: 2px solid;
+    border-radius: 10px;
+    position: relative;
+}
+
+/* title */
+.title-text {
+    font-size: 2rem;
+    margin-top: .5rem;
+    background-color: white;
+    padding: 1rem;
+    max-width: 50%;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+/* type, genre, author */
+.type-text,
+.genre-text,
+.author-text {
+    background-color: white;
+    padding: .5rem;
+    min-width: 200px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.type-genre-container {
+    max-width: 50%;
+}
+
+
+/* author */
+.author-text {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    max-width: 2%;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+/* review content */
+.review-text {
+    background-color: white;
+    max-width: 100%;
+    padding: .5rem;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+/* rating */
+.rating-text {
+    color: rgb(82, 82, 82);
+    font-size: 1.25rem;
+    background-color: white;
+    padding: .5rem;
+    position: absolute;
+    top: 10rem;
+    right: 4rem;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+/* INPUTS, TEXTAREAS, BUTTONS */
+input {
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: .8rem;
+    font-size: 1.5rem;
+    max-width: 100%;
+}
+
+#ReviewContent {
+    border-radius: 10px;
+    border: 2px solid black;
+    display: block;
+    margin: auto;
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+    max-width: 100%;
+    font-size: 1.5rem;
+    font-family: "Roboto", sans-serif;
+}
+
+#createReviewButton {
+    font-size: 1.5rem;
+    display: block;
+    margin: auto;
+    min-width: 50%;
+    padding: .5rem;
+}
+
+button {
+    background-color: rgba(89, 134, 78, 0.616);
+    border-radius: 10px;
+}
+
+.btn {
+    font-size: 2.5rem;
+    margin: 1rem;
+}
+
+nav {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#contact {
+    position: absolute;
+    top: 1rem;
+
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: lightyellow;
+}
+
+#contact a {
+    text-decoration: none;
+    color: black;
+}
+
+/* FOOTER */
+footer {
+    text-align: left;
+    margin-top: 20rem;
+}
+
+footer ul {
+    padding-left: 0;
+}
+
+footer li {
+    list-style-type: none;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+@media screen and (min-width: 700px) {
+
+    h1 {
+        position: absolute;
+        left: 0;
+        top: 10rem;
+    }
+
+    /* FIXED MARKER */
+    .fixed-marker {
+        position: fixed;
+        top: 0;
+        left: 1rem;
+        max-height: 3.5rem;
+        max-width: 16rem;
+    }
+
+    .fixed-marker h2 {
+        margin-bottom: 0;
+    }
+
+    #title2 {
+        font-size: 2.5rem;
+        color: lightyellow;
+    }
+
+    #title2-br {
+        font-size: 2.5rem;
+        color: rgb(18, 61, 18);
+    }
+
+    #owner-mark {
+        text-align: right;
+        padding-top: 0;
+        margin: 0;
+        font-size: 1.25rem;
+        margin-top: .5rem;
+    }
+
+    /* MAIN CONTENT */
+    form {
+        position: absolute;
+        top: 15rem;
+    }
+
+
+    /* Reviews */
+    #viewReview {
+        text-align: center;
+    }
+
+    .card-body {
+        margin-right: 0;
+        margin-left: 50rem;
+        max-width: 40rem;
+    }
+
+    #Title,
+    #Type,
+    #Genre {
+        position: absolute;
+        left: 2rem;
+
+    }
+
+    #Type {
+        top: 4.5rem;
+    }
+
+    #Genre {
+        top: 8rem;
+    }
+
+    #ReviewContent {
+        margin-top: 10rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    /* INPUTS, TEXTAREAS, BUTTONS */
+    #contact {
+        position: absolute;
+        right: 2rem;
+        top: 1rem;
+        font-size: 1.5rem;
+        background-color: lightyellow;
+    }
+
+    #buttonList .btn {
+        margin-top: 5rem;
+    }
+
+    /* FOOTER */
+    footer {
+        text-align: center;
+        margin-top: 20rem;
+    }
+
+    footer li {
+        list-style-type: none;
+        display: inline-block;
+        padding: 6rem;
+    }
+
+    footer a {
+        text-decoration: none;
+    }
+}

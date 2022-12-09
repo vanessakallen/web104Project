@@ -1,0 +1,77 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediaMingle - Index</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://web01.scwebsrv.com/WEB%20104/FP-Files/CSS/index.css">
+</head>
+
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+
+
+
+<body>
+    <h1>Create Review Post</h1>
+    <div class="fixed-marker">
+        <h2><span id="title2">Media</span><span id="title2-br">Mingle</span></h2>
+        <h2 id="owner-mark">by Vanessa Allen</h2>
+    </div>
+
+    <nav>
+        <button id="contact"><a href="https://web01.scwebsrv.com/WEB%20104/FP-Files/contact.html">Contact Us</a></button>
+    </nav>
+
+
+    <form>
+        <div class="form-group">
+            <input type="text" class="form-control" id="Title" aria-describedby="Title"
+                placeholder="Media Title">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" id="Type" aria-describedby="Type" placeholder="Media Type ex) movie">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" id="Genre" aria-describedby="Genre"
+                placeholder="Genre">
+        </div>
+        <div class="form-group">
+            <textarea name="ReviewContent" id="ReviewContent" cols="30" rows="10" placeholder="Review content"></textarea>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" id="Author" aria-describedby="Author" placeholder="Who created it?">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" id="Rating" aria-describedby="Rating" placeholder="Rating 0/5">
+        </div>
+        <!-- Post Button -->
+        <button type="submit" class="btn" id="createReviewButton">Post</button>
+    </form>
+
+
+    <!-- List of review Titles displayed as buttons -->
+    <div id="buttonList">
+
+    </div>
+
+    <!-- View review after clicking the Title button -->
+    <div id="viewReview">
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <ul>
+            <li>&copy; MediaMingle.com 2022</li>
+            <li><a href="https://web01.scwebsrv.com/WEB%20104/FP-Files/welcome.html">Home</a></li>
+            <li><a href="https://web01.scwebsrv.com/WEB%20104/FP-Files/contact.html">Contact Us</a></li>
+        </ul>
+    </footer>
+</body>
+
+<script src="https://web01.scwebsrv.com/WEB%20104/FP-Files/JS/index.js"></script>

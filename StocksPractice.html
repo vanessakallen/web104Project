@@ -1,0 +1,114 @@
+<body></body>
+
+<script>
+
+    // Tech Stocks
+    const techStockPortfolio = [
+        {
+            companyName: "Apple Inc.",
+            stockSymbol: "AAPL",
+            recentSharePrice: 138.88,
+            averageVolume: 84780507,
+            marketCap: 2209000000000
+        },
+        {
+            companyName: "Microsoft Corporation",
+            stockSymbol: "MSFT",
+            recentSharePrice: 214.25,
+            averageVolume: 26952325,
+            marketCap: 1597000000000
+        },
+        {
+            companyName: "NVIDIA Corporation",
+            stockSymbol: "NVDA",
+            recentSharePrice: 134.21,
+            averageVolume: 58538000,
+            marketCap: 334451000000
+        },
+        {
+            companyName: "Oracle Corporation",
+            stockSymbol: "ORCL",
+            recentSharePrice: 75.03,
+            averageVolume: 8559160,
+            marketCap: 202294000000
+        },
+        {
+            companyName: "Adobe Inc.",
+            stockSymbol: "ADBE",
+            recentSharePrice: 285.93,
+            averageVolume: 4032331,
+            marketCap: 132929000000
+        }
+    ];
+
+    // Gold Stocks
+    const goldStockPortfolio = [
+        {
+            companyName: "Centerra Gold Inc.",
+            stockSymbol: "CGAU",
+            recentSharePrice: 4.4600,
+            averageVolume: 197426,
+            marketCap: 981771000
+        },
+        {
+            companyName: "Sandstorm Gold Ltd.",
+            stockSymbol: "SAND",
+            recentSharePrice: 4.6300,
+            averageVolume: 2555396,
+            marketCap: 1388000000
+        },
+        {
+            companyName: "Alamos Gold Inc.",
+            stockSymbol: "AGI.TO",
+            recentSharePrice: 10.20,
+            averageVolume: 653179,
+            marketCap: 4004000000
+        },
+        {
+            companyName: "Torex Gold Resources Inc.",
+            stockSymbol: "TXG.TO",
+            recentSharePrice: 8.85,
+            averageVolume: 315119,
+            marketCap: 759718000
+        },
+        {
+            companyName: "Dundee Precious Metals Inc.",
+            stockSymbol: "DPM.TO",
+            recentSharePrice: 6.10,
+            averageVolume: 341157,
+            marketCap: 1162000000
+        }
+    ];
+
+    // function averagePrice(arr) {
+
+    //     return arr.reduce((acc, curr) => (
+    //         acc + curr.recentSharePrice
+    //     ), 0) / arr.length;
+    // }
+
+    // function averageVolume(arr) {
+    //     return arr.reduce((acc, curr) => (
+    //         acc + curr.averageVolume
+    //     ), 0) / arr.length;
+    // }
+
+
+    // function highestVolume(arr) {
+    //     return Math.max(...arr.map(stockVolume => stockVolume.averageVolume));
+    // }
+
+
+    // Lowest Volume
+    function lowestVolume (arr) {
+        return Math.min(...arr.map(stockVolume => stockVolume.averageVolume));
+    }
+
+    
+    // Highest Market Cap
+    function highestMarketCap (arr) {
+        return Math.max(...arr.map(stockVolume => stock.Volume.marketCap));
+    }
+
+
+</script>
